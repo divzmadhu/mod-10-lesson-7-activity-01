@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -8,9 +8,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/" >Home Page </Link>
-        <Link to="/About">About Page</Link>
-        <Link to="/Products">Products Page</Link>
+        <NavLink to="/" end >Home Page </NavLink>
+        <NavLink to="/About">About Page</NavLink>
+        <NavLink to="/Products">Products Page</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
